@@ -29,7 +29,6 @@ PRODUCT_PACKAGES := \
     Email2 \
     Exchange2 \
     FusedLocation \
-    Gallery2 \
     InputDevices \
     LatinIME \
     Launcher2 \
@@ -43,6 +42,15 @@ PRODUCT_PACKAGES := \
     bluetooth-health \
     hostapd \
     wpa_supplicant.conf
+
+ifeq ($(USE_OPENGL_RENDERER),true)
+PRODUCT_PACKAGES += \
+    Gallery2
+else
+PRODUCT_PACKAGES += \
+    Gallery \
+    LegacyCamera
+endif
 
 PRODUCT_PACKAGES += \
     audio \
