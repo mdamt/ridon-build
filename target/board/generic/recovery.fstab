@@ -1,7 +1,7 @@
 # mount point		fstype		device
 
-/system		ext4		system
-/cache		ext4		cache
-/data		ext4		userdata
+/system		yaffs2		system
+/cache		yaffs2		cache
+/data		yaffs2		userdata
 /sdcard		vfat		/dev/block/mmcblk0
 
