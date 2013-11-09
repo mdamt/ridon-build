@@ -1542,7 +1542,7 @@ sdk_dir := $(HOST_OUT)/sdk
 #     darwin-x86  --> android-sdk_12345_mac-x86
 #     windows-x86 --> android-sdk_12345_windows
 #
-sdk_name := android-sdk_$(FILE_NAME_TAG)
+sdk_name := replicant-sdk
 ifeq ($(HOST_OS),darwin)
   INTERNAL_SDK_HOST_OS_NAME := mac
 else
