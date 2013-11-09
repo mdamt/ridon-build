@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
     libvideoeditor_videofilters \
     libvideoeditorplayer
 
+ifeq ($(USE_OPENGL_RENDERER),true)
 PRODUCT_PACKAGES += \
     Galaxy4 \
     HoloSpiralWallpaper \
@@ -42,6 +43,7 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     VisualizationWallpapers \
     PhotoTable
+endif
 
 include $(SRC_TARGET_DIR)/product/emulator.mk
 
