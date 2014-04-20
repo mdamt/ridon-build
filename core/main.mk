@@ -755,6 +755,9 @@ cacheimage: $(INSTALLED_CACHEIMAGE_TARGET)
 .PHONY: bootimage
 bootimage: $(INSTALLED_BOOTIMAGE_TARGET)
 
+.PHONY: bootloaderimage
+bootloaderimage: $(INSTALLED_BOOTLOADERIMAGE_TARGET)
+
 ifeq ($(BUILD_TINY_ANDROID), true)
 INSTALLED_RECOVERYIMAGE_TARGET :=
 endif
