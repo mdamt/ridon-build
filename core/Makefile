@@ -376,6 +376,8 @@ ALL_DEFAULT_INSTALLED_MODULES += $(event_log_tags_file)
 # the bootloader
 INSTALLED_BOOTLOADERIMAGE_TARGET := $(PRODUCT_OUT)/bootloader.img
 
+INSTALLED_UBOOT_MODULE := $(PRODUCT_OUT)/u-boot.bin
+
 # -----------------------------------------------------------------
 # the ramdisk
 INTERNAL_RAMDISK_FILES := $(filter $(TARGET_ROOT_OUT)/%, \
