@@ -1344,7 +1344,7 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
 	   --override_device=$(override_device) \
 	   $(BUILT_TARGET_FILES_PACKAGE) $@
 
-REPLICANT_TARGET_PACKAGE := $(PRODUCT_OUT)/$(REPLICANT_VERSION)-$(CM_BUILD).zip
+ridon_TARGET_PACKAGE := $(PRODUCT_OUT)/$(ridon_VERSION)-$(CM_BUILD).zip
 
 .PHONY: otapackage bacon
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
@@ -1352,8 +1352,8 @@ bacon: otapackage
 ifneq ($(TARGET_CUSTOM_RELEASETOOL),)
 	$(error TARGET_CUSTOM_RELEASETOOL is deprecated)
 endif
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(REPLICANT_TARGET_PACKAGE)
-	@echo -e ${CL_CYN}"Package Complete: $(REPLICANT_TARGET_PACKAGE)"${CL_RST}
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(ridon_TARGET_PACKAGE)
+	@echo -e ${CL_CYN}"Package Complete: $(ridon_TARGET_PACKAGE)"${CL_RST}
 
 # -----------------------------------------------------------------
 # The update package
@@ -1547,7 +1547,7 @@ sdk_dir := $(HOST_OUT)/sdk
 #     darwin-x86  --> android-sdk_12345_mac-x86
 #     windows-x86 --> android-sdk_12345_windows
 #
-sdk_name := replicant-sdk
+sdk_name := ridon-sdk
 ifeq ($(HOST_OS),darwin)
   INTERNAL_SDK_HOST_OS_NAME := mac
 else
